@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>0f8146d3-87b7-499a-aec8-33c3f384bc30</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Linky.py</StartupFile>
+    <StartupFile>test_requests.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="check_link.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Linky.py" />
+    <Compile Include="playground.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test_requests.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
