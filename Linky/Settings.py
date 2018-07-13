@@ -27,4 +27,4 @@ class Settings:
         'https': 'https://i00109058:Salerdo100500@proxy.endress.com:8080',
     }
 
-    filePath = "tst.txt"
+    testFilePath = "tst.txt"
