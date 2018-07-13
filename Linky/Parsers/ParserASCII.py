@@ -2,7 +2,7 @@ import re
 
 
 class ParserASCII:
- 
+
     def parseFile(self, filePath):
         file = open(filePath, 'r')
         data = file.read()

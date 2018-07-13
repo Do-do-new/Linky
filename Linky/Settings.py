@@ -28,3 +28,5 @@ class Settings:
     }
 
     testFilePath = "tst.txt"
+
+    errorCodes = [400, 404, 403, 408, 409, 501, 502, 503]
