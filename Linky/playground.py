@@ -9,11 +9,7 @@ import threading
 from colorama import Fore
 # import mimetypes
 
-proxies = {
-    'http': 'http://i00109058:Salerdo100500@proxy.endress.com:8080',
-    'https': 'https://i00109058:Salerdo100500@proxy.endress.com:8080',
-}
-
+from Settings import Settings
 
 class check_link():
     def __init__(self, address):
@@ -21,7 +17,7 @@ class check_link():
 
     def check(self, address):
         try:
-            resp = requests.get(url=address, proxies=proxies)
+            resp = requests.get(url=address, proxies=Settings.proxies)
             if resp.status_code in [400, 404, 403, 408, 409, 501, 502, 503]:
                 print(Fore.RED + resp.status_code + "-" + resp.reason + "-->" +
                       address)
@@ -57,7 +53,7 @@ def extract_link(address):
     for key, value in iter(tags.items()):
         try:
 
-            res = requests.get(url=address, proxies=proxies)
+            res = requests.get(url=address, proxies=Settings.proxies)
             respText = res.text
             for link in BeautifulSoup(
                     respText, "html.parser", parse_only=SoupStrainer(key)):
