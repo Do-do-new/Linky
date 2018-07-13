@@ -1,6 +1,12 @@
 from Settings import Settings
+from Parsers.ParserASCII import ParserASCII
 
 if __name__ == "__main__":
-    print(Settings.filePath)
-    print(Settings.proxies)
+
+    parser = ParserASCII()
+    print(parser.parseFile(Settings.filePath))
+
+    # soup = BeautifulSoup(data)
+    # for link in soup.find_all('a'):
+    #     print(link)
 
